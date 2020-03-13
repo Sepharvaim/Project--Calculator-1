@@ -4,7 +4,13 @@
     padding: 0;
 }
 body {
-    background-color: rgb(110, 91, 91)
+    background-color: rgb(110, 91, 91);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 }
 h1 {
     width: 200px;
@@ -29,10 +35,21 @@ h1 {
     background-color: #93a1c3;
 }
 .numbers,
-.operator {
-    margin: 10px;
+.operators {
+    margin: 15px;
     cursor: pointer;
     font-size: large;
+    width: 75px;
+    /* justify-self: stretch;    this is the default value it comes modified by margin and width */
+}
+.dot {
+    margin: 15px;
+    cursor: pointer;
+    font-size: large;
+    width: 75px;
+}
+.numbers {
+    background: brown;
 }
 .screen {
     grid-column: 1 / span 4;
@@ -44,8 +61,8 @@ h1 {
 }
 
 button {
-    border-radius: 50%;
-    margin: 5px;
+    border-radius: 6px;
+    
     box-shadow: none;
 }
 .display1, 
@@ -66,6 +83,7 @@ button {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-.display2 {border-top-left-radius: 0;
+.display2 {
+    border-top-left-radius: 0;
     border-top-right-radius: 0;
 }

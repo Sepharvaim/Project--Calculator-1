@@ -26,6 +26,7 @@ function operazioni(segno,a,b) {
             break;
     }    
 }
+let suono = document.querySelector('#audio');
 
 
 let dot = document.querySelector(".dot");
@@ -132,9 +133,12 @@ function aggiungiNumero(mouseEvent) {
     let numero = mouseEvent.target.innerHTML;
     if (variabileD2 === "0") {
         variabileD2 = "";
+        suono.play();
+        
     }
     variabileD2 += numero;
     display2.value = variabileD2;
+    suono.play();
 };
 
 
@@ -146,3 +150,24 @@ function delOneCaracter() {
     variabileD2 = display2.value;
 }
 
+
+
+
+
+
+// * CAMBIO DEL COLORE DELLA CALCOLATRICE * /
+
+const inputs = document.querySelector(".bottoniDiCambio input");
+
+function handleUpdate() {
+            console.log(this.name)
+    
+                                                    /* this sarebbe input -- this che premo */
+    document.documentElement.style.setProperty(`--${this.name}`, this.value);
+}
+
+
+inputs.addEventListener('change',handleUpdate);
+inputs.addEventListener('mousemove', handleUpdate);
+// inputs.forEach(input => input.addEventListener('change', handleUpdate));
+// inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));

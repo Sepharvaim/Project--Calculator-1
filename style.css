@@ -2,15 +2,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    touch-action: none;
 }
 body {
-    background-color: rgb(110, 91, 91);
+    background: url(img.jpg) rgb(110, 91, 91);
+    background-size: 1900px 1000px;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
+}
+:root {
+    --base: #1d2422;
+}
+.bottoniDiCambio {
+    text-align: center;
+    font-size: 36;
+    
 }
 h1 {
     width: 200px;
@@ -21,7 +31,7 @@ h1 {
     width: 490px;
     height: 600px;
     margin: 35px auto;
-    background-color: #1d2422;
+    background-color: var(--base); /*1d2422*/
     /* border: 1px solid blue; */
     display: grid;
     grid-template-columns: auto auto auto auto; 
